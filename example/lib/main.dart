@@ -7,6 +7,7 @@ import 'package:aliyun_oss/aliyun_oss.dart';
 import 'package:aliyun_oss/client_config.dart';
 import 'package:aliyun_oss/put_object_request.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +28,9 @@ class _MyAppState extends State<MyApp> {
 
   String imgUrl;
 
+  double _precent1 = 0;
+  double _precent2 = 0;
+
   AliyunOssClient ossClient;
   
   @override
@@ -42,9 +46,10 @@ class _MyAppState extends State<MyApp> {
     try {
       platformVersion = await AliyunOssClient.platformVersion;
       ossClient = await AliyunOssClient.getInstance(config: new AliyunOssClientConfig(
-          accessKeyId: "LTAI4Fu648e9AGBEJZUWu3cw",
-          accessKeySecret: "cWfMm8OanF1aEGHvj1aZ2ODBCGi8MV",
-          endpoint: "oss-accelerate.aliyuncs.com"
+        accessKeyId: "LTAI4Fu648e9AGBEJZUWu3cw",
+        accessKeySecret: "cWfMm8OanF1aEGHvj1aZ2ODBCGi8MV",
+        endpoint: "oss-accelerate.aliyuncs.com",
+        clientKey: "client-key"
       ));
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
@@ -88,7 +93,80 @@ class _MyAppState extends State<MyApp> {
                       });
                     });
                   });
-                }, child: Text('上传')),
+                }, child: Text('同步上传【不推荐使用】')),
+                FlatButton(onPressed: () {
+                  _picker.getImage(source: ImageSource.gallery).then((PickedFile file) {
+                    Future.delayed(Duration(milliseconds: 60), () async {
+                      _precent1 = 0;
+                      setState(() {
+
+                      });
+                      final handler = await ossClient.putObject(AliyunOssPutObjectRequest(
+                          bucketName: 'gdjcywebdata001',
+                          file: file.path
+                      ));
+                      handler.onProgress = (currentSize, totalSize, progress) {
+                        _precent1 = currentSize / totalSize;
+                        if (_precent1 >= 1) _precent1 = 0.9999;
+                        setState(() {
+
+                        });
+                      };
+                      handler.onSuccess = (result) {
+                        _precent1 = 1;
+                        setState(() {
+
+                        });
+                        ossClient.disposeHandler(handler.taskId);
+                      };
+                      handler.onFailure = (result) {
+                        ossClient.disposeHandler(handler.taskId);
+                      };
+                    });
+                  });
+                }, child: Text('异步上传1')),
+                new LinearPercentIndicator(
+                  percent: _precent1,
+                  backgroundColor: Colors.grey,
+                  progressColor: Colors.blue,
+                ),
+                FlatButton(onPressed: () {
+                  _picker.getImage(source: ImageSource.gallery).then((PickedFile file) {
+                    Future.delayed(Duration(milliseconds: 60), () async {
+                      _precent2 = 0;
+                      setState(() {
+
+                      });
+                      final handler = await ossClient.putObject(AliyunOssPutObjectRequest(
+                          bucketName: 'gdjcywebdata001',
+                          file: file.path
+                      ));
+                      handler.onProgress = (currentSize, totalSize, progress) {
+                        _precent2 = currentSize / totalSize;
+                        if (_precent2 >= 1) _precent2 = 0.9999;
+                        setState(() {
+
+                        });
+                      };
+                      handler.onSuccess = (result) {
+                        _precent2 = 1;
+                        setState(() {
+
+                        });
+                        ossClient.disposeHandler(handler.taskId);
+                      };
+                      handler.onFailure = (result) {
+                        ossClient.disposeHandler(handler.taskId);
+                      };
+                    });
+                  });
+                }, child: Text('异步上传2')),
+                new LinearPercentIndicator(
+                  percent: _precent2,
+                  backgroundColor: Colors.grey,
+                  progressColor: Colors.blue,
+                ),
+                SizedBox(height: 8,),
                 Center(
                   child: Text('Running on: $_platformVersion\n'),
                 ),
@@ -104,4 +182,11 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    ossClient.dispose();
+  }
+
 }

@@ -6,8 +6,9 @@ class PutObjectResult {
   final String errorCode;
   final String message;
   final String eTag;
+  final bool isSuccess;
 
-  PutObjectResult({this.url, this.requestId, this.statusCode, this.errorCode, this.message, this.eTag});
+  PutObjectResult({this.url, this.requestId, this.statusCode, this.errorCode, this.message, this.eTag, this.isSuccess});
 
   factory PutObjectResult.fromJson(final json) {
     return PutObjectResult(url: json["url"],
@@ -15,7 +16,8 @@ class PutObjectResult {
       statusCode: int.parse(json["statusCode"].toString()),
       errorCode: json["errorCode"],
       message: json["message"],
-      eTag: json["eTag"],);
+      eTag: json["eTag"],
+      isSuccess: json['isSuccess']);
   }
 
 }
