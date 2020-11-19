@@ -98,14 +98,22 @@
                         @"requestId": ossResult.requestId,
                         @"statusCode": @(ossResult.httpResponseCode),
                         @"eTag": ossResult.eTag,
-                        @"message":@"上传成功"
+                        @"message":@"上传成功",
+                        @"errorCode":@"-1",
+                        @"isSuccess":@(true)
                 },
                 @"taskId": taskId
             }];
         } else {
             NSLog(@"upload object failed, error: %@" , task.error);
+            NSDictionary *dictionary = @{
+                @"message":task.error.userInfo[@"ErrorMessage"],
+                @"errorCode":@"-1",
+                @"statusCode":@"0",
+                @"isSuccess":@(false)
+            };
             [channel invokeMethod:@"onFailure" arguments:@{
-                @"result": task.error.userInfo,
+                @"result":dictionary,
                 @"taskId": taskId
             }];
         }

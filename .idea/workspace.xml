@@ -2,72 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5a63af6-c6c7-4879-ba2b-0af7d266098f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/AliyunOSSiOS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/AliyunOSSiOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/NSDate+OSS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/NSMutableData+OSS_CRC.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/NSMutableDictionary+OSS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSAllRequestNeededMessage.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSBolts.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCancellationToken.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCancellationTokenRegistration.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCancellationTokenSource.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSClient.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCocoaLumberjack.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCompat.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSConstants.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDDLog.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDefine.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDeleteMultipleObjectsRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDeleteMultipleObjectsResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSExecutor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSFileLogger.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetBucketInfoRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetBucketInfoResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetObjectACLRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetObjectACLResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetSymlinkRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetSymlinkResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSHttpResponseParser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSHttpdns.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSIPv6Adapter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSIPv6PrefixResolver.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSLog.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSLogMacros.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSNSLogger.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSNetworking.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSNetworkingRequestDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSPutSymlinkRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSPutSymlinkResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSReachability.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSReachabilityManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSRestoreObjectRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSRestoreObjectResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSResult.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSService.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSTask.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSTaskCompletionSource.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSURLRequestRetryHandler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSUtil.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSXMLDictionary.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Modules/module.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/PrivateHeaders/aos_crc64.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aliyun_oss.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun_oss.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/aliyun_oss.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/aliyun_oss.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/client_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,25 +63,25 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="792" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1920.977@0.23.1920.977" timestamp="1602497188928" />
-    <state width="1878" height="334" key="GridCell.Tab.0.bottom" timestamp="1605153067311">
+    <state width="1878" height="334" key="GridCell.Tab.0.bottom" timestamp="1605785061064">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1878" height="334" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1605153067311" />
+    <state width="1878" height="334" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1605785061064" />
     <state width="1878" height="325" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
-    <state width="1878" height="334" key="GridCell.Tab.0.center" timestamp="1605153067311">
+    <state width="1878" height="334" key="GridCell.Tab.0.center" timestamp="1605785061063">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1878" height="334" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1605153067311" />
+    <state width="1878" height="334" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1605785061063" />
     <state width="1878" height="325" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
-    <state width="1878" height="334" key="GridCell.Tab.0.left" timestamp="1605153067310">
+    <state width="1878" height="334" key="GridCell.Tab.0.left" timestamp="1605785061063">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1878" height="334" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1605153067310" />
+    <state width="1878" height="334" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1605785061063" />
     <state width="1878" height="325" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
-    <state width="1878" height="334" key="GridCell.Tab.0.right" timestamp="1605153067311">
+    <state width="1878" height="334" key="GridCell.Tab.0.right" timestamp="1605785061063">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1878" height="334" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1605153067311" />
+    <state width="1878" height="334" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1605785061063" />
     <state width="1878" height="325" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
     <state x="461" y="148" key="SettingsEditor" timestamp="1605149119700">
       <screen x="0" y="23" width="1920" height="973" />
@@ -167,11 +104,6 @@
           <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
           <line>89</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/put_object_result.dart</url>
-          <line>13</line>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
