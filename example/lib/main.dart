@@ -49,7 +49,8 @@ class _MyAppState extends State<MyApp> {
         accessKeyId: "LTAI4Fu648e9AGBEJZUWu3cw",
         accessKeySecret: "cWfMm8OanF1aEGHvj1aZ2ODBCGi8MV",
         endpoint: "oss-accelerate.aliyuncs.com",
-        clientKey: "client-key"
+        clientKey: "client-key",
+        stsServer: 'http://192.168.0.55:89/hero/app/sbs/home/getAliyunSTSToken'
       ));
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';

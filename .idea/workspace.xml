@@ -2,28 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5a63af6-c6c7-4879-ba2b-0af7d266098f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/io/github/aliyun_oss/inter/AliyunOssPutObjectCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/put_object_event_handler.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/put_object_progress.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/put_object_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Classes/AliyunUploadManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Classes/AliyunUploadManager.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Classes/OSSPutClient.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Classes/OSSPutClient.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/io/github/aliyun_oss/AliyunOssClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/io/github/aliyun_oss/AliyunOssClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/io/github/aliyun_oss/AliyunOssPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/io/github/aliyun_oss/AliyunOssPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aliyun_oss.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/aliyun_oss.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/client_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/put_object_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/put_object_result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/aliyun_oss.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/aliyun_oss.podspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/AliyunOSSiOS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/AliyunOSSiOS.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/NSDate+OSS.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/NSMutableData+OSS_CRC.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/NSMutableDictionary+OSS.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSAllRequestNeededMessage.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSBolts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCancellationToken.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCancellationTokenRegistration.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCancellationTokenSource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSClient.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCocoaLumberjack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSCompat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSConstants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDDLog.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDefine.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDeleteMultipleObjectsRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSDeleteMultipleObjectsResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSExecutor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSFileLogger.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetBucketInfoRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetBucketInfoResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetObjectACLRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetObjectACLResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetSymlinkRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSGetSymlinkResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSHttpResponseParser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSHttpdns.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSIPv6Adapter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSIPv6PrefixResolver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSLog.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSLogMacros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSNSLogger.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSNetworking.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSNetworkingRequestDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSPutSymlinkRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSPutSymlinkResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSReachability.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSReachabilityManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSRestoreObjectRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSRestoreObjectResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSResult.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSTask.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSTaskCompletionSource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSURLRequestRetryHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSUtil.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Headers/OSSXMLDictionary.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/Modules/module.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/framework/AliyunOSSiOS.framework/PrivateHeaders/aos_crc64.h" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.dart_tool/" />
-    <ignored path="$PROJECT_DIR$/.idea/" />
-    <ignored path="$PROJECT_DIR$/.pub/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/example/.pub/" />
-    <ignored path="$PROJECT_DIR$/example/build/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,109 +74,6 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/aliyun_oss.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1295">
-              <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
-              <folding>
-                <element signature="e#1#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/put_object_event_handler.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/put_object_response.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/put_object_result.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/put_object_progress.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/packages/flutter/lib/src/services/platform_channel.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="376" column="68" selection-start-line="376" selection-start-column="53" selection-end-line="376" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ios/Classes/SwiftAliyunOssPlugin.swift">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/client_config.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -143,105 +81,23 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ClientConfiguration</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/lib/config.dart" />
-        <option value="$PROJECT_DIR$/lib/put_object.dart" />
-        <option value="$PROJECT_DIR$/example/android/app/build.gradle" />
-        <option value="$PROJECT_DIR$/android/build.gradle" />
-        <option value="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/lib/aliyun_oss_put_object_request.dart" />
-        <option value="$PROJECT_DIR$/lib/aliyun_oss_client_config.dart" />
-        <option value="$PROJECT_DIR$/lib/client_config.dart" />
-        <option value="$PROJECT_DIR$/lib/put_object_response.dart" />
-        <option value="$PROJECT_DIR$/lib/put_object_result.dart" />
-        <option value="$PROJECT_DIR$/lib/put_object_progress.dart" />
-        <option value="$PROJECT_DIR$/example/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/put_object_event_handler.dart" />
-        <option value="$PROJECT_DIR$/lib/aliyun_oss.dart" />
-        <option value="$PROJECT_DIR$/example/lib/main.dart" />
-      </list>
-    </option>
+  <component name="ProjectId" id="1ilmdub8CZYYhwuDZXTStXV4L7X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="475" />
-    <option name="y" value="56" />
-    <option name="width" value="1680" />
-    <option name="height" value="972" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-              <item name="Assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-              <item name="Classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aliyun_oss" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aliyun_oss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/android/libs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -249,18 +105,6 @@
       <recent name="$PROJECT_DIR$/android/libs" />
       <recent name="$PROJECT_DIR$/android/lib" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -275,264 +119,59 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1953602" />
-      <window_info id="Captures" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="Build Variants" order="5" side_tool="true" />
-      <window_info id="Resources Explorer" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Find" />
-      <window_info anchor="bottom" id="Messages" weight="0.32959184" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.28367347" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" order="4" />
-      <window_info anchor="bottom" id="Debug" order="5" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.4642857" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Flutter Inspector" order="3" />
-      <window_info anchor="right" id="Flutter Outline" order="4" visible="true" weight="0.12820514" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Flutter Performance" order="6" />
-    </layout>
+  <component name="WindowStateProjectService">
+    <state x="792" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1602497188928">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="792" y="407" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1920.977@0.23.1920.977" timestamp="1602497188928" />
+    <state width="1878" height="473" key="GridCell.Tab.0.bottom" timestamp="1605841915914">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1605841915914" />
+    <state width="1878" height="325" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
+    <state width="1878" height="473" key="GridCell.Tab.0.center" timestamp="1605841915914">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1605841915914" />
+    <state width="1878" height="325" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
+    <state width="1878" height="473" key="GridCell.Tab.0.left" timestamp="1605841915913">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1605841915913" />
+    <state width="1878" height="325" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
+    <state width="1878" height="473" key="GridCell.Tab.0.right" timestamp="1605841915914">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1605841915914" />
+    <state width="1878" height="325" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1602499569273" />
+    <state x="461" y="148" key="SettingsEditor" timestamp="1605149119700">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state x="461" y="148" key="SettingsEditor/0.23.1920.973@0.23.1920.973" timestamp="1605149119700" />
+    <state x="613" y="267" width="693" height="488" key="find.popup" timestamp="1602490970047">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="613" y="267" width="693" height="488" key="find.popup/0.23.1920.977@0.23.1920.977" timestamp="1602490970047" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/android/aliyun_oss_android.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/aliyun_oss.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1573" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/local.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-213" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/.pub-cache/hosted/pub.flutter-io.cn/permission_handler-5.0.1+1/lib/permission_handler.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/bin/cache/pkg/sky_engine/lib/typed_data/typed_data.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3659">
-          <caret line="923" column="15" selection-start-line="923" selection-start-column="15" selection-end-line="923" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker_platform_interface-1.1.1/lib/src/platform_interface/image_picker_platform.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2804">
-          <caret line="140" column="21" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.7+11/lib/image_picker.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker_platform_interface-1.1.1/lib/src/types/picked_file/base.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/bin/cache/pkg/sky_engine/lib/core/duration.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/packages/flutter/lib/src/material/scaffold.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="1710" column="60" selection-start-line="1710" selection-start-column="60" selection-end-line="1710" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/packages/flutter/lib/src/material/snack_bar.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/put_object.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/put_object_request.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#1#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios/aliyun_oss.podspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios/Classes/SwiftAliyunOssPlugin.swift">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flutter/lib/flutter/packages/flutter/lib/src/services/platform_channel.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="376" column="68" selection-start-line="376" selection-start-column="53" selection-end-line="376" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/put_object_result.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/put_object_response.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/client_config.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/put_object_progress.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/put_object_event_handler.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/aliyun_oss.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1295">
-          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>104</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>89</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ios/Classes/AliyunOssPlugin.m</url>
+          <line>32</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
