@@ -14,10 +14,16 @@ A new flutter plugin project.
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
+  s.public_header_files = 'Classes/public/*.h'
+  s.static_framework = true
   s.dependency 'Flutter'
+  s.dependency 'AliyunOSSiOS'
   s.platform = :ios, '8.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
+  s.ios.vendored_frameworks = 'framework/AliyunOSSiOS.framework'
+  s.vendored_frameworks = 'AliyunOSSiOS.framework'
+  s.library   = "resolv"
 end
