@@ -31,7 +31,8 @@ class AliyunOssClient {
     return aliyunOssClient;
   }
 
-  /// 简单文件上传（同步）
+  /// 简单文件上传（同步）废弃
+  @deprecated
   Future<PutObjectResult> putObjectSync(AliyunOssPutObjectRequest putObjectRequest) async {
     final result = await _channel.invokeMethod("putObjectSync", {
       ...putObjectRequest.toMap(),

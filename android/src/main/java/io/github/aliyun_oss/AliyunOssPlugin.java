@@ -97,7 +97,6 @@ public class AliyunOssPlugin implements FlutterPlugin, MethodCallHandler {
           final Map<String, Object> res = new HashMap<>();
           res.put("currentSize", currentSize);
           res.put("totalSize", totalSize);
-          res.put("progress", currentSize / totalSize * 100);
           res.put("taskId", taskId);
           /// fix: Methods marked with @UiThread must be executed on the main thread.
           Runnable runnable = new Runnable() {
