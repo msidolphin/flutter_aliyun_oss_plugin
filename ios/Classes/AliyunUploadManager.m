@@ -22,7 +22,6 @@
     NSString *objectName = arguments[@"objectName"];
     NSString *file = arguments[@"file"];
     NSString *bucketName = arguments[@"bucketName"];
-//    NSString *clientKey = arguments[@"clientKey"];
     if ((NSNull *)objectName == [NSNull null] ||objectName == nil) {
         objectName = [[[NSUUID UUID] UUIDString] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     }
@@ -38,7 +37,6 @@
         [[OSSPutClient shareInstall].channel invokeMethod:@"onProgress" arguments:@{
             @"currentSize":@(totalByteSent),
             @"totalSize": @(totalBytesExpectedToSend),
-            @"progress": @(totalByteSent/totalBytesExpectedToSend),
             @"taskId": taskId
         }];
     };
@@ -51,27 +49,13 @@
             OSSPutObjectResult *ossResult = task.result;
             NSDictionary *result = ossResult.httpResponseHeaderFields;
             [channel invokeMethod:@"onSuccess" arguments:@{
-                @"result": @{
-                        @"url": url,
-                        @"requestId": ossResult.requestId,
-                        @"statusCode": @(ossResult.httpResponseCode),
-                        @"eTag": ossResult.eTag,
-                        @"message":@"上传成功",
-                        @"errorCode":@"-1",
-                        @"isSuccess":@(true)
-                },
+                @"url": url,
                 @"taskId": taskId
             }];
         } else {
             NSLog(@"upload object failed, error: %@" , task.error);
-            NSDictionary *dictionary = @{
-                @"message":task.error.userInfo[@"ErrorMessage"],
-                @"errorCode":@"-1",
-                @"statusCode":@"0",
-                @"isSuccess":@(false)
-            };
             [channel invokeMethod:@"onFailure" arguments:@{
-                @"result":dictionary,
+                @"errorMessage":task.error.userInfo[@"ErrorMessage"],
                 @"taskId": taskId
             }];
         }

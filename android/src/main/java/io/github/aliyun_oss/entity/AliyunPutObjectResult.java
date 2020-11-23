@@ -37,6 +37,7 @@ public class AliyunPutObjectResult extends PutObjectResult {
         this.setServerCallbackReturnBody(putObjectResult.getServerCallbackReturnBody());
         this.setUrl(url);
         this.setMessage("ok");
+        this.setErrorCode("0");
         this.setIsSuccess(true);
     }
 

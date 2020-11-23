@@ -42,21 +42,12 @@ public class AliyunOssPlugin implements FlutterPlugin, MethodCallHandler {
   public void onMethodCall(@NonNull final MethodCall call, @NonNull final Result result) {
     if (call.method.equals("init")) {
       String endpoint = call.argument("endpoint");
-      String accessKeyId = call.argument("accessKeyId");
-      String accessKeySecret = call.argument("accessKeySecret");
+      String stsServer = call.argument("stsServer");
       String clientKey = call.argument("clientKey");
-      AliyunOssClient ossClient = new AliyunOssClient(context, new AliyunOssClientConfig(endpoint, accessKeyId, accessKeySecret
-      ), new AliyunOssClientConnectConfig(null, null, null, null));
+      AliyunOssClient ossClient = new AliyunOssClient(context, new AliyunOssClientConfig(endpoint, stsServer),
+              new AliyunOssClientConnectConfig(null, null, null, null));
       ossClients.put(clientKey, ossClient);
       result.success(true);
-    } else if (call.method.equals("putObjectSync")) {
-      String bucketName = call.argument("bucketName");
-      String objectName = call.argument("objectName");
-      String filePath = call.argument("file");
-      String clientKey = call.argument("clientKey");
-      AliyunOssClient ossClient = ossClients.get(clientKey);
-      AliyunPutObjectResult putObjectResult = ossClient.putObjectSync(bucketName, objectName, filePath);
-      result.success(putObjectResult.toMap());
     } else if (call.method.equals("putObject")) {
       String bucketName = call.argument("bucketName");
       String objectName = call.argument("objectName");
@@ -67,7 +58,7 @@ public class AliyunOssPlugin implements FlutterPlugin, MethodCallHandler {
         @Override
         public void onSuccess(String taskId, AliyunPutObjectResult aliyunPutObjectResult) {
           final Map<String, Object> res = new HashMap<>();
-          res.put("result", aliyunPutObjectResult.toMap());
+          res.put("url", aliyunPutObjectResult.getUrl());
           res.put("taskId", taskId);
           Runnable runnable = new Runnable() {
             @Override
@@ -81,7 +72,7 @@ public class AliyunOssPlugin implements FlutterPlugin, MethodCallHandler {
         @Override
         public void onFailure(String taskId, AliyunPutObjectResult aliyunPutObjectResult) {
           final Map<String, Object> res = new HashMap<>();
-          res.put("result", aliyunPutObjectResult.toMap());
+          res.put("errorMessage", aliyunPutObjectResult.getMessage());
           res.put("taskId", taskId);
           Runnable runnable = new Runnable() {
             @Override
@@ -111,10 +102,7 @@ public class AliyunOssPlugin implements FlutterPlugin, MethodCallHandler {
       result.success(taskId);
     } else if (call.method.equals("dispose")) {
       String clientKey = call.argument("clientKey");
-      /// TODO
       ossClients.remove(clientKey);
-    } else if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else {
       result.notImplemented();
     }

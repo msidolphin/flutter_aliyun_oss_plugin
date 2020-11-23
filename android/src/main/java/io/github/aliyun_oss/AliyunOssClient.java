@@ -36,25 +36,17 @@ public class AliyunOssClient {
         ossClient = new OSSClient(context, "http://" + clientConfig.getEndpoint(), clientConfig.getOSSCredentialProvider(), connectConfig.getClientConfiguration());
     }
 
+    @Deprecated
     public AliyunPutObjectResult putObjectSync(String bucketName, String objectName, String filePath) {
         objectName = getObjectName(objectName);
         PutObjectRequest put = new PutObjectRequest(bucketName, objectName, filePath);
         String url = "https://" + bucketName + "." + clientConfig.getEndpoint() + "/" + objectName;
         try {
             PutObjectResult putResult = ossClient.putObject(put);
-            Log.d("PutObject", "UploadSuccess");
-            Log.d("ETag", putResult.getETag());
-            Log.d("RequestId", putResult.getRequestId());
             return new AliyunPutObjectResult(putResult, url);
         } catch (ClientException e) {
-            Log.d("ClientException", e.getMessage());
             return new AliyunPutObjectResult(e);
         } catch (ServiceException e) {
-            // 服务异常。
-            Log.e("RequestId", e.getRequestId());
-            Log.e("ErrorCode", e.getErrorCode());
-            Log.e("HostId", e.getHostId());
-            Log.e("RawMessage", e.getRawMessage());
             return new AliyunPutObjectResult(e);
         }
     }
@@ -74,9 +66,6 @@ public class AliyunOssClient {
         OSSAsyncTask task = ossClient.asyncPutObject(put, new OSSCompletedCallback<PutObjectRequest, PutObjectResult>() {
             @Override
             public void onSuccess(PutObjectRequest request, PutObjectResult result) {
-                Log.d("PutObject", "UploadSuccess");
-                Log.d("ETag", result.getETag());
-                Log.d("RequestId", result.getRequestId());
                 AliyunPutObjectResult aliyunPutObjectResult = new AliyunPutObjectResult(result, url);
                 callBack.onSuccess(taskId, aliyunPutObjectResult);
             }
@@ -89,11 +78,6 @@ public class AliyunOssClient {
                     aliyunPutObjectResult = new AliyunPutObjectResult(clientExcepion);
                 }
                 if (serviceException != null) {
-                    // 服务异常。
-                    Log.e("ErrorCode", serviceException.getErrorCode());
-                    Log.e("RequestId", serviceException.getRequestId());
-                    Log.e("HostId", serviceException.getHostId());
-                    Log.e("RawMessage", serviceException.getRawMessage());
                     aliyunPutObjectResult = new AliyunPutObjectResult(serviceException);
                 }
                 callBack.onFailure(taskId, aliyunPutObjectResult);

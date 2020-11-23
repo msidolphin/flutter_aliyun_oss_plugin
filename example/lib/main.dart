@@ -1,3 +1,4 @@
+import 'package:aliyun_oss/put_object_event_handler.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -44,10 +45,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await AliyunOssClient.platformVersion;
-      ossClient = await AliyunOssClient.getInstance(config: new AliyunOssClientConfig(
-        accessKeyId: "LTAI4Fu648e9AGBEJZUWu3cw",
-        accessKeySecret: "cWfMm8OanF1aEGHvj1aZ2ODBCGi8MV",
+      ossClient = await AliyunOssClient.init(config: new AliyunOssClientConfig(
         endpoint: "oss-accelerate.aliyuncs.com",
         clientKey: "client-key",
         stsServer: 'http://192.168.0.55:89/hero/app/sbs/home/getAliyunSTSToken'
@@ -81,47 +79,27 @@ class _MyAppState extends State<MyApp> {
                 FlatButton(onPressed: () {
                   _picker.getImage(source: ImageSource.gallery).then((PickedFile file) {
                     Future.delayed(Duration(milliseconds: 60), () async {
-                      final start = DateTime.now();
-                      final result = await ossClient.putObjectSync(AliyunOssPutObjectRequest(
-                          bucketName: 'gdjcywebdata001',
-                          file: file.path
-                      ));
-                      final end = DateTime.now();
-                      text = "上传成功：${result.url} 共耗时：${end.millisecondsSinceEpoch - start.millisecondsSinceEpoch}ms";
-                      imgUrl = result.url;
-                      setState(() {
-
-                      });
-                    });
-                  });
-                }, child: Text('同步上传【不推荐使用】')),
-                FlatButton(onPressed: () {
-                  _picker.getImage(source: ImageSource.gallery).then((PickedFile file) {
-                    Future.delayed(Duration(milliseconds: 60), () async {
                       _precent1 = 0;
                       setState(() {
-
                       });
-                      final handler = await ossClient.putObject(AliyunOssPutObjectRequest(
+                      PutObjectEventHandler handler = await ossClient.putObject(AliyunOssPutObjectRequest(
                           bucketName: 'gdjcywebdata001',
                           file: file.path
                       ));
-                      handler.onProgress = (currentSize, totalSize, progress) {
+                      handler.onProgress = (currentSize, totalSize) {
                         _precent1 = currentSize / totalSize;
                         if (_precent1 >= 1) _precent1 = 0.9999;
                         setState(() {
 
                         });
                       };
-                      handler.onSuccess = (result) {
+                      handler.onSuccess = (url) {
                         _precent1 = 1;
                         setState(() {
-
                         });
-                        ossClient.disposeHandler(handler.taskId);
                       };
-                      handler.onFailure = (result) {
-                        ossClient.disposeHandler(handler.taskId);
+                      handler.onFailure = (message) {
+
                       };
                     });
                   });
@@ -136,28 +114,25 @@ class _MyAppState extends State<MyApp> {
                     Future.delayed(Duration(milliseconds: 60), () async {
                       _precent2 = 0;
                       setState(() {
-
                       });
-                      final handler = await ossClient.putObject(AliyunOssPutObjectRequest(
+                      PutObjectEventHandler handler = await ossClient.putObject(AliyunOssPutObjectRequest(
                           bucketName: 'gdjcywebdata001',
                           file: file.path
                       ));
-                      handler.onProgress = (currentSize, totalSize, progress) {
+                      handler.onProgress = (currentSize, totalSize) {
                         _precent2 = currentSize / totalSize;
                         if (_precent2 >= 1) _precent2 = 0.9999;
                         setState(() {
 
                         });
                       };
-                      handler.onSuccess = (result) {
+                      handler.onSuccess = (url) {
                         _precent2 = 1;
                         setState(() {
-
                         });
-                        ossClient.disposeHandler(handler.taskId);
                       };
-                      handler.onFailure = (result) {
-                        ossClient.disposeHandler(handler.taskId);
+                      handler.onFailure = (message) {
+
                       };
                     });
                   });
