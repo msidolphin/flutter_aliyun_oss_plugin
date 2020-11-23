@@ -22,7 +22,9 @@ class AliyunOssClient {
   static final StreamController<PutObjectResult> _streamController = new StreamController<PutObjectResult>.broadcast();
 
   static Future<AliyunOssClient> init({@required AliyunOssClientConfig config}) async {
-    await _channel.invokeMethod("init", config.toMap());
+    Map<String, Object> obj = config.toMap();
+    obj['clientKey'] = _clientKey;
+    await _channel.invokeMethod("init", obj);
     AliyunOssClient aliyunOssClient = new AliyunOssClient();
     _streamController.stream.listen((event) {
       final handler = _handlers[event.taskId];

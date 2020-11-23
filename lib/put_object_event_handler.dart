@@ -15,7 +15,6 @@ class PutObjectEventHandler {
   PutObjectEventHandler({this.taskId});
 
   void dispatch(PutObjectResult event) {
-    print(event.taskId);
     if (event.taskId != taskId) return;
     if (event.isFinished) {
       onSuccess?.call(event.url);
