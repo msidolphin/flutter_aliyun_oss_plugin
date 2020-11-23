@@ -28,7 +28,7 @@ class AliyunOssClient {
       final handler = _handlers[event.taskId];
       if (handler != null) {
         handler.dispatch(event);
-        _handlers.remove(event.taskId);
+        if (event.isFinished) _handlers.remove(event.taskId);
       }
     });
     return aliyunOssClient;
