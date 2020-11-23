@@ -47,8 +47,7 @@ class _MyAppState extends State<MyApp> {
     try {
       ossClient = await AliyunOssClient.init(config: new AliyunOssClientConfig(
         endpoint: "oss-accelerate.aliyuncs.com",
-        clientKey: "client-key",
-        stsServer: 'http://192.168.0.55:89/hero/app/sbs/home/getAliyunSTSToken'
+        stsServer: 'https://miniprogram.gongjiangyi.com/hero/app/sbs/home/getAliyunSTSToken'
       ));
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';

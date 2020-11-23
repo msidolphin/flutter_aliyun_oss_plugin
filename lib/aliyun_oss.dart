@@ -8,29 +8,31 @@ import 'package:aliyun_oss/put_object_result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
-/// TODO 完善错误处理
+const String CLIENT_KEY = "primary";
+
 class AliyunOssClient {
 
-  String _clientKey;
+  static String _clientKey = CLIENT_KEY;
 
   static MethodChannel _channel =
       const MethodChannel('io.github/aliyun_oss')..setMethodCallHandler(_methodHandler);
 
-  static final StreamController<PutObjectResult> _streamController = new StreamController<PutObjectResult>.broadcast();
+  static Map<String, PutObjectEventHandler> _handlers = {};
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
+  static final StreamController<PutObjectResult> _streamController = new StreamController<PutObjectResult>.broadcast();
 
   static Future<AliyunOssClient> init({@required AliyunOssClientConfig config}) async {
     await _channel.invokeMethod("init", config.toMap());
     AliyunOssClient aliyunOssClient = new AliyunOssClient();
-    aliyunOssClient._clientKey = config.clientKey;
+    _streamController.stream.listen((event) {
+      final handler = _handlers[event.taskId];
+      if (handler != null) {
+        handler.dispatch(event);
+        _handlers.remove(event.taskId);
+      }
+    });
     return aliyunOssClient;
   }
-
-
 
   /// 简单文件上传
   Future<PutObjectEventHandler> putObject(AliyunOssPutObjectRequest putObjectRequest) async {
@@ -38,17 +40,10 @@ class AliyunOssClient {
       ...putObjectRequest.toMap(),
       "clientKey": _clientKey
     });
-    final PutObjectEventHandler handler = new PutObjectEventHandler();
-    _streamController.stream.listen((event) {
-        if (event.taskId != taskId) return;
-        if (event.isFinished) {
-          handler.onSuccess?.call(event.url);
-        } else if (event.isError) {
-          handler.onFailure?.call(event.errorMessage);
-        } else {
-          handler.onProgress?.call(event.currentSize, event.totalSize);
-        }
-    });
+    final PutObjectEventHandler handler = new PutObjectEventHandler(
+      taskId: taskId
+    );
+    _handlers[taskId] = handler;
     return handler;
   }
 
@@ -79,9 +74,9 @@ class AliyunOssClient {
     return Future.value();
   }
 
-
   void dispose() {
     _streamController.close();
+    _handlers.clear();
   }
 
 }
