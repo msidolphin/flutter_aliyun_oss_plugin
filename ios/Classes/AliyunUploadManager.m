@@ -24,6 +24,7 @@
     NSString *bucketName = arguments[@"bucketName"];
     if ((NSNull *)objectName == [NSNull null] ||objectName == nil) {
         objectName = [[[NSUUID UUID] UUIDString] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        objectName = [objectName lowercaseString];
     }
     OSSPutObjectRequest *put = [OSSPutObjectRequest new];
     // 配置必填字段。
@@ -44,7 +45,6 @@
     [putTask continueWithBlock:^id(OSSTask *task) {
         FlutterMethodChannel *channel = [OSSPutClient shareInstall].channel;
         if (!task.error) {
-            NSLog(@"upload object success!");
             NSString *url = [NSString stringWithFormat:@"https://%@.%@/%@",bucketName,self.endpoint,objectName];
             OSSPutObjectResult *ossResult = task.result;
             NSDictionary *result = ossResult.httpResponseHeaderFields;
@@ -53,7 +53,6 @@
                 @"taskId": taskId
             }];
         } else {
-            NSLog(@"upload object failed, error: %@" , task.error);
             [channel invokeMethod:@"onFailure" arguments:@{
                 @"errorMessage":task.error.userInfo[@"ErrorMessage"],
                 @"taskId": taskId
